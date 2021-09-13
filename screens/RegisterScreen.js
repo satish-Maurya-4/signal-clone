@@ -29,6 +29,7 @@ const RegisterScreen = ({ navigation }) => {
       })
       .catch((error) => alert(error.message))
   }
+
   return (
     <KeyboardAvoidingView behavior="padding" style={styles.container}>
       <StatusBar style="light" />
@@ -56,7 +57,11 @@ const RegisterScreen = ({ navigation }) => {
           onSubmitEditing={Register}
         />
       </View>
-      <Button containerStyle={styles.button} title="Register" />
+      <Button
+        containerStyle={styles.button}
+        title="Register"
+        onPress={() => navigation.navigate('Home')}
+      />
     </KeyboardAvoidingView>
   )
 }

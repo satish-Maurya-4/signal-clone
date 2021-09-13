@@ -9,7 +9,6 @@ import HomeScreen from './screens/HomeScreen'
 
 const Stack = createNativeStackNavigator()
 export default function App() {
-  
   const globalScreenOptions = {
     headerStyle: { backgroundColor: '#2c6BED' },
     headerTitleStyle: { color: '#ffffff' },
@@ -18,7 +17,10 @@ export default function App() {
   return (
     <NavigationContainer>
       <StatusBar style="light" />
-      <Stack.Navigator screenOptions={globalScreenOptions}>
+      <Stack.Navigator
+        screenOptions={globalScreenOptions}
+        initialRouteName="Home"
+      >
         <Stack.Screen
           options={{
             title: "Let's Login",

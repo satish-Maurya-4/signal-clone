@@ -1,11 +1,28 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React, { useLayoutEffect } from 'react'
+import { StyleSheet, Text, View, SafeAreaView, ScrollView } from 'react-native'
+import { Avatar } from 'react-native-elements/dist/avatar/Avatar'
+import CustomListItem from '../components/CustomListItem'
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      title: 'Signal',
+      headerStyle: { backgroundColor: '#fff' },
+      headerTitleStyle: { color: '#000' },
+      headerTintColor: 'black',
+      headerLeft: () => (
+        <View style={{ marginLeft: 20 }}>
+          <Avatar rounded source={{}} />
+        </View>
+      ),
+    })
+  })
   return (
-    <View>
-      <Text>Home screen</Text>
-    </View>
+    <SafeAreaView>
+      <ScrollView>
+        <CustomListItem />
+      </ScrollView>
+    </SafeAreaView>
   )
 }
 
