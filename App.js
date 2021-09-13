@@ -9,6 +9,7 @@ import HomeScreen from './screens/HomeScreen'
 
 const Stack = createNativeStackNavigator()
 export default function App() {
+  
   const globalScreenOptions = {
     headerStyle: { backgroundColor: '#2c6BED' },
     headerTitleStyle: { color: '#ffffff' },
